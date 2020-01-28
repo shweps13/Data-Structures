@@ -35,4 +35,8 @@ class LRUCache:
     the newly-specified value.
     """
     def set(self, key, value):
-        pass
+        if key in self.hash_table[key]:
+            new_node = self.hash_table[key]
+            print(new_node)
+            self.storage.move_to_front(new_node)
+
