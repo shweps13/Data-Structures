@@ -26,6 +26,7 @@ class LRUCache:
             return None
         else:
             value = self.cache[key]
+            print(value)
             self.storage.move_to_front(value)
             return value
 
@@ -44,7 +45,11 @@ class LRUCache:
             new_node = self.cache[key]
             print("node",new_node)
             self.storage.move_to_front(new_node)
+        self.storage.add_to_head((key, value))
+        print(self.cache[key])
 
 
 # obj = LRUCache(5)
+# param_2 = obj.set('item1', 'a')
+
 # param_1 = obj.get(1)
