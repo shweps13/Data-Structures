@@ -45,3 +45,6 @@ class LRUCache:
             print("node",new_node)
             self.storage.move_to_front(new_node)
 
+
+# obj = LRUCache(5)
+# param_1 = obj.get(1)
