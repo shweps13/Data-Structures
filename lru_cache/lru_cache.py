@@ -27,8 +27,8 @@ class LRUCache:
         else:
             value = self.cache[key]
             print(value)
-            self.storage.move_to_front(value)
-            return value
+            self.storage.move_to_front(value[1])
+            return value[1]
 
     """
     Adds the given key-value pair to the cache. The newly-
