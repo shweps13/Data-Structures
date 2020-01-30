@@ -52,12 +52,8 @@ class BinarySearchTree:
     def for_each(self, cb):
         if self.left:
             self.left.for_each(cb)
-        else:
-            cb(self.value)
         if self.right:
             self.right.for_each(cb)
-        else:
-            cb(self.value)
 
     # DAY 2 Project -----------------------
 
@@ -86,3 +82,13 @@ class BinarySearchTree:
     # Print Post-order recursive DFT
     def post_order_dft(self, node):
         pass
+
+# a = BinarySearchTree(16)
+# a.insert(3)
+# a.insert(17)
+# a.insert(4)
+# a.insert(9)
+# a.insert(15)
+
+# print(a.value)
+# print(a.get_max())
