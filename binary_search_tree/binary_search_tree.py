@@ -50,6 +50,8 @@ class BinarySearchTree:
     # Call the function `cb` on the value of each node
     # You may use a recursive or iterative approach
     def for_each(self, cb):
+        cb(self.value)
+
         if self.left:
             self.left.for_each(cb)
         if self.right:
@@ -59,8 +61,18 @@ class BinarySearchTree:
 
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
+    
+    # check if there is a value => 
+    # check if the node has a left/right =>
+    # recursively call the left/right item
     def in_order_print(self, node):
-        pass
+        if node == None:
+            return None
+        if node.left is not None:
+            self.in_order_print(node.left)
+        print(node.value)
+        if node.right is not None:
+            self.in_order_print(node.right)
 
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
